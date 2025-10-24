@@ -57,8 +57,8 @@ SCRAPE_TRUSTPILOT = True
 
 # Output options
 OUTPUT_REVIEWS_ONLY = False  # Set to True to only output raw reviews CSV
-OUTPUT_ANALYSIS_ONLY = False  # Set to True to only output analysis CSV
-OUTPUT_BOTH = True  # Set to True to output both raw reviews and analysis
+OUTPUT_ANALYSIS_ONLY = True  # Set to True to only output analysis CSV
+OUTPUT_BOTH = False  # Set to True to output both raw reviews and analysis
 SINGLE_FILE = True  # Set to True to combine all reviews into a single CSV file (yourapp_reviews.csv)
 
 # Scraping parameters
