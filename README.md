@@ -12,6 +12,10 @@ Product managers need quick, actionable insights from customer reviews to unders
 
 This scraper solves these problems by providing a **quick, no-setup solution** to extract and analyze reviews from multiple platforms in minutes.
 
+### How This Scraper Was Built
+
+ All the code was created and optimized using Cursor Agent + Claude Sonnet 4.5.  
+
 ### When to Use This Scraper
 
 **Ideal scenarios:**
@@ -49,8 +53,11 @@ This scraper solves these problems by providing a **quick, no-setup solution** t
 
 **Bottom line**: This scraper is perfect for quick research and ad-hoc analysis, but shouldn't replace a production-grade reviews monitoring system for mission-critical use cases.
 
----
+**Note**
+- *reviews_scraper_quickboooks.py* is an example of using reviews_scraper.py to extract App Store, Google Play Store, and Trustpilot reviews for Quickbooks. 
+- *quickbooks_reviews_analysis* and *quickbooks_reviews_analysis* are the outputs from running reviews_scraper_quickboooks.py 
 
+---
 
 ## Configuration
 
@@ -62,7 +69,6 @@ APP_STORE_ID = "123456789"  # Insert your app's App Store ID
 GOOGLE_PLAY_ID = "com.example"  # Insert your app's Google Play Store ID
 TRUSTPILOT_URL = "https://www.trustpilot.com/review/exampleapp.com"  # Insert your app's Trustpilot URL
 ```
-
 ### Platform Selection
 ```python
 SCRAPE_APP_STORE = True      # Set to False to skip App Store
