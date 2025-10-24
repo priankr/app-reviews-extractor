@@ -1,0 +1,50 @@
+# Task
+
+Build a Python script that scrapes app reviews from App Store, Google Play, and Trustpilot with sentiment analysis.
+
+## Requirements
+
+### Data Collection
+- Scrape reviews from **last 12 months only** (365 days)
+- Extract: `review_date`, `star_rating` (1-5), `reviewer_anonymized` (initials), `review_text`, `platform`
+- Deduplicate using tuple keys: `(date, rating, text[:100])`
+- Use timezone-aware UTC datetimes throughout
+
+### Platform Implementation
+
+**App Store**
+- Use RSS JSON feed: `https://itunes.apple.com/us/rss/customerreviews/page={page}/id={app_id}/sortby=mostrecent/json`
+- Parse `feed.entry` array, extract from nested labels
+- Stop when oldest review exceeds 12 months
+
+**Google Play**
+- Use `google-play-scraper` library with `Sort.NEWEST`
+- Batch size: 100, use continuation tokens
+- Handle up to 3 consecutive errors with retries
+
+**Trustpilot**
+- Scrape HTML with BeautifulSoup (lxml parser)
+- Selectors: `section[data-testid='reviews-list'] article`, `<time datetime>`, rating from image alt text
+- Scrape pages concurrently with ThreadPoolExecutor
+
+### Configuration Options
+- Platform selection: Enable/disable each platform independently
+- Output options: `OUTPUT_REVIEWS_ONLY`, `OUTPUT_ANALYSIS_ONLY`, `OUTPUT_BOTH`
+- Single file option: `SINGLE_FILE` to combine all platforms into one CSV
+- Scraping limits: `MAX_PAGES_*` for each platform, `MAX_WORKERS`, `REQUEST_TIMEOUT`
+
+### Key Features
+
+1. **Config Validation**: Check IDs/URLs are valid format before scraping, show clear errors
+2. **Graceful Shutdown**: Handle CTRL+C - save partial results, cancel background threads
+3. **Sentiment Analysis**: NLTK VADER by default, optional HuggingFace (USE_HF=1 env var), score -1 to 1
+4. **Performance**: Session reuse, connection pooling, concurrent Trustpilot scraping, progress bars (tqdm)
+5. **Output**: Separate files per platform OR single combined file based on `SINGLE_FILE` setting
+
+## Expected Output
+- Progress bars showing pages scraped and review counts
+- Summary with timing stats (scraping time, processing time, reviews/sec)
+- CSV files sorted by date (newest first), then rating
+- Clean error messages using `[WARN]`, `[ERROR]`, `[INFO]` prefixes
+
+Generate complete, production-ready code with proper error handling, type hints, and comments.

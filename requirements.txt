@@ -1,0 +1,15 @@
+# Core packages required for reviews_scraper.py
+requests>=2.31.0
+beautifulsoup4>=4.12.2
+lxml>=5.2.2
+python-dateutil>=2.9.0
+google-play-scraper>=1.2.6
+pandas>=2.0.0
+nltk>=3.8
+tqdm>=4.66.0
+
+# Optional packages for enhanced sentiment analysis
+# Uncomment these if you want to use Hugging Face transformers instead of NLTK VADER
+# Set USE_HF=1 environment variable to enable
+# transformers>=4.40
+# torch>=2.2

@@ -1,0 +1,19 @@
+# Context
+I want to build a Python script to quickly scrape app reviews.
+
+## Task
+
+I want to pull reviews from the App Store, Google Play Store, and Trustpilot for my app so I can analyze what customers are saying. 
+
+## Requirements
+
+- Need to be able to turn on/off each platform (e.g., App Store reviews only or all three)
+- Reviews should be saved as CSV files
+- Include an option to add sentiment scores (positive/negative analysis)
+- Only get reviews from the past 12 months
+- Include an option to configure how many pages to scrape
+- There should be no duplicate reviews
+- Add an option to enter all the settings at the top
+- Include an option to to indicate which platform to extract reviews from (App Store, Google Play, or Trustpilot)
+- Inlcude the review date, star rating, reviewer name (anonymized), review text, and platform in extracted reviews
+- Include an option to save separate files per platform or combine everything into one file 
