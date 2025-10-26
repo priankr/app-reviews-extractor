@@ -31,21 +31,21 @@ This scraper solves these problems by providing a **quick, no-setup solution** t
 
 ### Benefits
 
-✅ **Free:** No API usage fees or recurring subscription costs.
-✅ **Rapid Implementation:** Full configuration and execution are achievable within five minutes.
-✅ **Cross-Platform Reviews:** Unified scraping functionality across App Store, Google Play, and Trustpilot platforms.
-✅ **Automated Sentiment Analysis:** Integrated analytical capabilities for immediate identification of sentiment trends and patterns.
-✅ **Zero-Configuration Setup:** Operates without API credentials or authentication protocols, enabling immediate deployment.
-✅ **Configurable Data Output:** Support for both platform-specific and consolidated reviews to accommodate diverse workflow requirements.
+- ✅ **Free:** No API usage fees or recurring subscription costs.
+- ✅ **Rapid Implementation:** Full configuration and execution are achievable within five minutes.
+- ✅ **Cross-Platform Reviews:** Unified scraping functionality across App Store, Google Play, and Trustpilot platforms.
+- ✅ **Automated Sentiment Analysis:** Integrated analytical capabilities for immediate identification of sentiment trends and patterns.
+- ✅ **Zero-Configuration Setup:** Operates without API credentials or authentication protocols, enabling immediate deployment.
+- ✅ **Configurable Data Output:** Support for both platform-specific and consolidated reviews to accommodate diverse workflow requirements.
 
 ### Limitations
 
-⚠️ **No Real-Time Updates:** Script has to be re-run to get fresh data.
-⚠️ **Data Completeness:** Web scraping may result in partial data retrieval.
-⚠️ **Maintenance**: Platform changes may break the scraper, requiring updates to the code.
-⚠️ **Data Accuracy**: Scraped content may occasionally have formatting issues or missing fields.
-⚠️ **Rate Limits**: Excessive requests may trigger rate-limiting protocols, temporarily blocking your IP.
-⚠️ **Temporal Data Access:** Retrieval is limited to currently accessible reviews, with no guaranteed access to historical or archived content.
+- ⚠️ **No Real-Time Updates:** Script has to be re-run to get fresh data.
+- ⚠️ **Data Completeness:** Web scraping may result in partial data retrieval.
+- ⚠️ **Maintenance**: Platform changes may break the scraper, requiring updates to the code.
+- ⚠️ **Data Accuracy**: Scraped content may occasionally have formatting issues or missing fields.
+- ⚠️ **Rate Limits**: Excessive requests may trigger rate-limiting protocols, temporarily blocking your IP.
+- ⚠️ **Temporal Data Access:** Retrieval is limited to currently accessible reviews, with no guaranteed access to historical or archived content.
 
 **Bottom line**: This scraper can be helpful for quick research and ad-hoc analysis, but shouldn't replace a production-grade reviews monitoring system for mission-critical use cases.
 
