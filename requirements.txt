@@ -1,5 +1,5 @@
 # Core packages required for reviews_scraper.py
-requests>=2.31.0
+requests>=2.32.0
 beautifulsoup4>=4.12.2
 lxml>=5.2.2
 python-dateutil>=2.9.0
@@ -8,8 +8,18 @@ pandas>=2.0.0
 nltk>=3.8
 tqdm>=4.66.0
 
+# SSL certificate bundle — fixes certificate verification on Windows Python 3.13+
+certifi>=2024.2.2
+
 # Optional packages for enhanced sentiment analysis
 # Uncomment these if you want to use Hugging Face transformers instead of NLTK VADER
-# Set USE_HF=1 environment variable to enable
+# Set USE_HF=1 environment variable or pass --use-hf flag to enable
 # transformers>=4.40
 # torch>=2.2
+
+# Compatibility notes:
+# - pandas 3.x (released Jan 2026) is supported; basic DataFrame operations used in this
+#   script are compatible with both 2.x and 3.x.
+# - lxml 6.x is supported; no lxml-specific API is used beyond the html parser.
+# - google-play-scraper is low-maintenance upstream. If it stops working, check for
+#   community forks on PyPI or GitHub.
